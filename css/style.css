@@ -221,6 +221,7 @@ body{
     height: max-content;
     position: fixed;
     z-index: 9999;
+    display: none;
     top: 0;
     text-align: center;
     background-color: whitesmoke;

@@ -1,6 +1,6 @@
 
 var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];
-
+var picker;
 function addResizeListener(){
 
     map.forEach(cls=>{
@@ -8,15 +8,15 @@ function addResizeListener(){
     });
     
     ///////////////
-    new Picker({
+   picker= new Picker({
         
             parent: document.querySelector('#colorPicker'),
         
             popup: false // 'right'(default), 'left', 'top', 'bottom'
         
         });
-
-    document.getElementsByClassName('picker_done')[0].firstElementChild.setAttribute('onclick','getColor()')
+        
+        
 
                
 }
@@ -61,6 +61,7 @@ resizerBottom.style.left=element.offsetLeft+element.offsetWidth/2+'px';
 resizerBottom.style.cursor="ns-resize";
 
 edit.style.top=(element.offsetTop)-window.scrollY+'px';
+edit.setAttribute('onclick','editEl(\''+element.className+'\')');
 
 exit.style.top=(element.offsetTop)-window.scrollY+'px';
 exit.style.left=element.offsetLeft+'px';
@@ -203,7 +204,7 @@ function enableScrolling(){
 
 
 
-//dragElement(document.getElementsByClassName("editPage")[0]);
+/////////////////////////////////////////dragElement(document.getElementsByClassName("editPage")[0]);
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -244,4 +245,34 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+///////////////////////////
+
+function editEl(elClass){
+ 
+    document.getElementById("editPage").style.display='block';
+    el=document.getElementsByClassName(elClass)[0];
+    
+    picker.onChange=function(color){
+    el.style.backgroundColor=color.rgbaString;    
+    }
+    document.getElementById("chooseImg").addEventListener('change',function(e){
+        var file = document.getElementById("chooseImg").files[0];
+        
+        var reader = new FileReader();
+        reader.onloadend = function() {
+             el.style.backgroundImage ='url(\''+ reader.result+'\')';
+             console.log(reader.result);
+        }
+        reader.readAsDataURL(file);
+    },false)
+   // document.getElementsByClassName("picker_editor")[0].firstElementChild.value.onchange=getColor();//.addEventListener('change',getColor,false);
+
+}
+
+
+//////////
+function closeEdit(){
+    document.getElementById("editPage").style.display='none';
 }

@@ -86,18 +86,20 @@
    <div class="editPage" id="editPage">
        <div id="colorPicker"></div>
        <br>
-       <button id="chooseImg">choose background image</button>
+       choose background image
+       <br>
+       <input type="file" style="direction:rtl" id="chooseImg">
        <br>
        <br>
        background size(%)
        <br>
        <br>
        <div id="backgroundXY">
-           <input type="number" min="1" max="100">
-           <input type="number" min="1" max="100">
+           <input type="number" min="1" max="100" value="100">
+           <input type="number" min="1" max="100" value="100">
        </div>
        <br>
-       <button id="setAttr">set</button>
+       <button id="setAttr" onclick="closeEdit()">set</button>
    </div>
 
 </body>
