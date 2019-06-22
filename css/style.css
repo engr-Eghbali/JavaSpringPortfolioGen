@@ -1,0 +1,224 @@
+
+@font-face{
+    font-family: "medium";
+    src: url('../assets/font/Vazir.woff');
+}
+@font-face{
+    font-family: "bold";
+    src: url('../assets/font/Vazir-Bold.woff');
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.header{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    height: 100px;
+    background-color: #e85332;
+}
+
+.topMenu{
+    height: 80%;
+    width: 70%;
+    float: left;
+    background-color: wheat;
+    border-radius: 0 8px 8px 0;
+}
+.logo{
+
+    width: 30%;
+    height: 80%;
+    float: left;
+    background-color: aqua;
+}
+
+.menuOption{
+
+    width: max-content;
+    position: relative;
+    float: left;
+    font-family: "bold";
+    font-size: 120%;
+    top: 25%;
+    bottom: 25%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-right: 1px solid black;
+}
+
+.main{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1%;
+    height: 1000px;
+    background-color: cadetblue;
+}
+
+.footer{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 200px;
+    font-family: 'bold';
+    text-align: center;
+    font-size: 130%;
+    background-color: #fe9e88;
+}
+
+.resizer{
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    float: left;
+    right:-10px;
+    bottom: -45%;
+    background-color: black;
+    border: 1px solid #e85332;
+    cursor: col-resize;
+    z-index: 999;
+}
+
+.move{
+
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    float: left;
+    left: -50%;
+    top: 45%;
+    background-color: black;
+    border: 1px solid rebeccapurple;
+    cursor: move;
+    z-index: 999;
+
+}
+
+.edit{
+
+    z-index: 999;;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    float: left;
+    left: 50%;
+    top: 2%;
+    background-color: transparent;
+    border: 1px solid black;
+    background-image: url('../assets/edit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor:crosshair;
+
+}
+
+.exitResizer{
+    z-index: 999;;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    float: left;
+    left: 50%;
+    top: 2%;
+    background-color: transparent;
+    border: 1px solid black;
+    background-image: url('../assets/cancel.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor:progress;
+
+
+}
+.Home{
+    width: 100%;
+    height: 200px;
+    background-color: azure;
+}
+
+.Avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 2%;
+}
+
+.Title{
+    text-align: center;
+    font-family: 'medium';
+    color: gray;
+    font-size: 110%;
+}
+
+.Name{
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'bold';
+    font-size: 130%;
+    color: brown;
+}
+
+.BIO{
+    width: 100%;
+    height: 250px;
+    background-color: beige;
+}
+
+.Biography{
+    height: 60%;
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 2%;
+    border-radius: 8px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+ .CVLink{
+    width: 20%;
+    height: 25%;
+    background-color: cornflowerblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.POSTS{
+    width: 100%;
+    height: 40%;
+    overflow-y: scroll;
+    font-family: 'medium';
+}
+
+.post{
+    width: 80%;
+    height: max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border: 1px dashed black;
+    padding: 1%;
+}
+
+
+
+
+h1{
+    font-family: 'bold'
+}
