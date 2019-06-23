@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <script>
+    var obj={id:"dcc32f432f3q"};
+    var postReq=new XMLHttpRequest();
+
+    postReq.onreadystatechange = function(){
+
+        if(this.readyState==4 && this.status==200){
+
+            console.log(this.response);
+        }
+
+    }
+
+    postReq.open("POST","http://localhost:8080/hello",true);
+    postReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    postReq.send(JSON.stringify(obj));
+    </script>
+</html>
