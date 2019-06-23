@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.HelloControllerTest" time="2.53" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.212-b04"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/reza/Palace/Lab/JavaServerTraining/mavenType/helloWorld"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.rmi.server.randomIDs" value="true"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/reza/Palace/Lab/JavaServerTraining/mavenType/helloWorld"/>
+    <property name="java.runtime.version" value="1.8.0_212-b04"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/opt/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/opt/maven/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.10.0-957.10.1.el7.x86_64"/>
+    <property name="library.jansi.path" value="/opt/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/reza"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="reza"/>
+    <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_212"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/opt/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testHello" classname="hello.HelloControllerTest" time="1.689">
+    <failure message="Response body doesn&apos;t match expectation.&#10;Expected: is &quot;Hello World!&quot;&#10;  Actual: &lt;!doctype html&gt;&#10;&lt;!--[if IE 8]&gt;&lt;html class=&quot;ie8 lt-ie10&quot;&gt;&lt;![endif]--&gt;&#10;&lt;!--[if IE 9]&gt;&lt;html class=&quot;ie9 lt-ie10&quot;&gt;&lt;![endif]--&gt;&#10;&lt;!--[if gt IE 9]&gt;&lt;!--&gt;&lt;html lang=&quot;en&quot;&gt;&lt;!--&lt;![endif]--&gt;&#10;&lt;head&gt;&#10;        &lt;meta charset=&quot;utf-8&quot;&gt;&#10;        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#10;        &lt;meta http-equiv=&quot;cleartype&quot; content=&quot;on&quot;&gt;&#10;        &lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;&#10;        &lt;meta name=&quot;HandheldFriendly&quot; content=&quot;True&quot;&gt;&#10;        &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;&#10;        &lt;script  src=&quot;./js/vanilla-picker.min.js&quot;&gt;&lt;/script&gt;&#10;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;&#10;        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/solid.css&quot; integrity=&quot;sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css&quot; integrity=&quot;sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq&quot; crossorigin=&quot;anonymous&quot;&gt;&#10;        &#10;        &lt;link href=&quot;./css/style.css&quot; rel=&quot;stylesheet&quot;&gt;&#10;        &lt;script src=&quot;./js/scripts.js&quot;&gt;&lt;/script&gt;&#10;        &#10;        &lt;style&gt;&#10;       &#10;        &#10;        &lt;/style&gt;&#10;        &#10;        &#10;&#10;&lt;/head&gt;&#10;&#10;&lt;body style=&quot;margin: 0;padding: 0;width: 100%;height: 100vh;background-color: #28675c;&quot; onscroll=&quot;updatePos()&quot;&gt;&#10;&#10;    &lt;div class=&quot;header&quot; style=&quot;width: 100%;overflow-x: scroll;overflow-y: hidden;margin: 0;height: 150px;background-color: #0e4b3c;&quot;&gt;&#10;        &lt;div class=&quot;logo&quot;  style=&quot;width: 25%;height: 80%;float: left;background-color: #e85332;background-image: url(&apos;./assets/logo.png&apos;);background-position: center;background-repeat: no-repeat;background-size: 100% 100%;&quot;&gt;&lt;/div&gt;&#10;        &lt;div class=&quot;topMenu&quot;  style=&quot;height: 80%;width: 45%;float: left;background-color: #e85332;border-radius: 0 8px 8px 0;&quot;&gt;&#10;            &lt;div class=&quot;menuOption&quot; style=&quot;width: max-content;position: relative;float: left;font-family: &apos;bold&apos;;font-size: 120%;top: 25%;bottom: 25%;padding-left: 1%;padding-right: 1%;border-right: 1px solid black;&quot;&gt;Home&lt;/div&gt;&#10;            &lt;div class=&quot;menuOption&quot;&gt;BIO&lt;/div&gt;&#10;            &lt;div class=&quot;menuOption&quot;&gt;POSTS&lt;/div&gt;&#10;            &lt;div class=&quot;menuOption&quot;&gt;CONTACT&lt;/div&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;&#10;&lt;!----&gt;&#10;&#10;    &lt;div class=&quot;main&quot;  style=&quot;width: 90%;margin-right: 5%;margin-left: 5%;margin-top: 1%;height: 1500px;background-color: cadetblue;&quot;&gt;&#10;&#10;        &lt;div class=&quot;Home&quot; style=&quot;width: 100%;height: 300px;background-color: azure;&quot;&gt;&#10;            &lt;div class=&quot;Avatar&quot;  style=&quot;width: 200px;height: 200px;border-radius: 50%;background-color: transparent;margin-left: auto;margin-right: auto;position: relative;top: 2%;background-image: url(&apos;./assets/avatar.jpg&apos;);background-position: center;background-repeat: no-repeat;background-size: cover;&quot;&gt;&lt;/div&gt;&#10;            &lt;div class=&quot;Name&quot; onclick=&quot;editText(this)&quot; style=&quot;text-align: center;margin-top: 2%;font-family: &apos;bold&apos;; font-size: 130%;color: brown;&quot;&gt;Kim Jung Un&lt;/div&gt;&#10;            &lt;div class=&quot;Title&quot; onclick=&quot;editText(this)&quot; style=&quot;text-align: center;font-family: &apos;medium&apos;;color: gray;font-size: 110%;&quot;&gt;Dictator,Maniac and Douchebag&lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;BIO&quot; style=&quot;width: 100%;height: 300px;background-color: #fe9e88;&quot;&gt;&#10;            &lt;div class=&quot;Biography&quot; onclick=&quot;editText(this)&quot;  style=&quot;height: 60%;width: 40%;margin-left: 30%;padding-top: 2%;border-radius: 8px;text-align: center;overflow-y: scroll;&quot; &gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor arcu eros, eu rutrum nibh pellentesque sed. Pellentesque eu ligula scelerisque ante aliquam rutrum ut vitae augue.Nunc id venenatis lectus, vel ullamcorper mi. Aenean efficitur hendrerit justo, vitae volutpat ligula. Aenean mi massa, tincidunt at libero id, iaculis pellentesque mi.Curabitur in ante dolor. Proin quis metus urna. Phasellus arcu sapien, consectetur at consequat id, consectetur et ipsum. Pellentesque imperdiet arcu non dignissim mattis.&lt;/div&gt;&#10;            &lt;div class=&quot;CVLink&quot;  style=&quot;width: 20%;height: 25%;background-color: #008603;margin-left: auto;margin-right: auto;margin-top: 1%;border-radius: 4px;&quot;&gt;&lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;POSTS&quot;  style=&quot;width: 100%;height: 900px;overflow-y: scroll;font-family: &apos;medium&apos;;&quot;&gt;&#10;&#10;            &lt;div class=&quot;post&quot; style=&quot;width: 80%;height: max-content;text-align: center;margin-left: auto;margin-right: auto;margin-top: 1%;border: 1px dashed black;padding: 1%;&quot;&gt;&#10;                &lt;h1&gt;Lorem ipsum dolor&lt;/h1&gt;&#10;                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor arcu eros, eu rutrum nibh pellentesque sed. Pellentesque eu ligula scelerisque ante aliquam rutrum ut vitae augue. Nunc id venenatis lectus, vel ullamcorper mi. Aenean efficitur hendrerit justo, vitae volutpat ligula. Aenean mi massa, tincidunt at libero id, iaculis pellentesque mi. Curabitur in ante dolor. Proin quis metus urna. Phasellus arcu sapien, consectetur at consequat id, consectetur et ipsum. Pellentesque imperdiet arcu non dignissim mattis. Donec tristique consectetur tortor, in faucibus turpis ullamcorper eget. Cras sagittis venenatis faucibus.&#10;                    &lt;img src=&quot;https://colorpalettes.net/wp-content/uploads/2013/10/cvetovaya-palitra-108.jpg&quot;&gt;&#10;&#10;            &lt;/div&gt;&#10;&#10;        &lt;/div&gt;&#10;&#10;    &lt;/div&gt;&#10;&#10;&lt;!----&gt;&#10;&#10;    &lt;div class=&quot;footer&quot; &gt;&#10;        &lt;div class=&quot;CONTACT&quot; &gt;&#10;            &lt;br&gt;&#10;            Linkedin : ----------&#10;            &lt;br&gt;&#10;            E-mail   : ----------&#10;            &lt;br&gt;&#10;            Website  : ----------&#10;            &lt;br&gt;&#10;            Phone    : ----------&#10;            &lt;br&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;&#10;&#10;   &lt;div class=&quot;editPage&quot; id=&quot;editPage&quot;&gt;&#10;       &lt;div id=&quot;colorPicker&quot;&gt;&lt;/div&gt;&#10;       &lt;br&gt;&#10;       choose background image&#10;       &lt;br&gt;&#10;       &lt;input type=&quot;file&quot; style=&quot;direction:rtl&quot; id=&quot;chooseImg&quot;&gt;&#10;       &lt;br&gt;&#10;       &lt;br&gt;&#10;       background size(%)&#10;       &lt;br&gt;&#10;       &lt;br&gt;&#10;       &lt;div id=&quot;backgroundXY&quot;&gt;&#10;           &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; value=&quot;100&quot;&gt;&#10;           &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;100&quot; value=&quot;100&quot;&gt;&#10;       &lt;/div&gt;&#10;       &lt;br&gt;&#10;       &lt;button id=&quot;setAttr&quot; onclick=&quot;closeEdit()&quot;&gt;set&lt;/button&gt;&#10;   &lt;/div&gt;&#10;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Response body doesn't match expectation.
+Expected: is "Hello World!"
+  Actual: <!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <script  src="./js/vanilla-picker.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+        
+        <link href="./css/style.css" rel="stylesheet">
+        <script src="./js/scripts.js"></script>
+        
+        <style>
+       
+        
+        </style>
+        
+        
+
+</head>
+
+<body style="margin: 0;padding: 0;width: 100%;height: 100vh;background-color: #28675c;" onscroll="updatePos()">
+
+    <div class="header" style="width: 100%;overflow-x: scroll;overflow-y: hidden;margin: 0;height: 150px;background-color: #0e4b3c;">
+        <div class="logo"  style="width: 25%;height: 80%;float: left;background-color: #e85332;background-image: url('./assets/logo.png');background-position: center;background-repeat: no-repeat;background-size: 100% 100%;"></div>
+        <div class="topMenu"  style="height: 80%;width: 45%;float: left;background-color: #e85332;border-radius: 0 8px 8px 0;">
+            <div class="menuOption" style="width: max-content;position: relative;float: left;font-family: 'bold';font-size: 120%;top: 25%;bottom: 25%;padding-left: 1%;padding-right: 1%;border-right: 1px solid black;">Home</div>
+            <div class="menuOption">BIO</div>
+            <div class="menuOption">POSTS</div>
+            <div class="menuOption">CONTACT</div>
+        </div>
+    </div>
+
+<!---->
+
+    <div class="main"  style="width: 90%;margin-right: 5%;margin-left: 5%;margin-top: 1%;height: 1500px;background-color: cadetblue;">
+
+        <div class="Home" style="width: 100%;height: 300px;background-color: azure;">
+            <div class="Avatar"  style="width: 200px;height: 200px;border-radius: 50%;background-color: transparent;margin-left: auto;margin-right: auto;position: relative;top: 2%;background-image: url('./assets/avatar.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
+            <div class="Name" onclick="editText(this)" style="text-align: center;margin-top: 2%;font-family: 'bold'; font-size: 130%;color: brown;">Kim Jung Un</div>
+            <div class="Title" onclick="editText(this)" style="text-align: center;font-family: 'medium';color: gray;font-size: 110%;">Dictator,Maniac and Douchebag</div>
+        </div>
+
+        <div class="BIO" style="width: 100%;height: 300px;background-color: #fe9e88;">
+            <div class="Biography" onclick="editText(this)"  style="height: 60%;width: 40%;margin-left: 30%;padding-top: 2%;border-radius: 8px;text-align: center;overflow-y: scroll;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor arcu eros, eu rutrum nibh pellentesque sed. Pellentesque eu ligula scelerisque ante aliquam rutrum ut vitae augue.Nunc id venenatis lectus, vel ullamcorper mi. Aenean efficitur hendrerit justo, vitae volutpat ligula. Aenean mi massa, tincidunt at libero id, iaculis pellentesque mi.Curabitur in ante dolor. Proin quis metus urna. Phasellus arcu sapien, consectetur at consequat id, consectetur et ipsum. Pellentesque imperdiet arcu non dignissim mattis.</div>
+            <div class="CVLink"  style="width: 20%;height: 25%;background-color: #008603;margin-left: auto;margin-right: auto;margin-top: 1%;border-radius: 4px;"></div>
+        </div>
+
+        <div class="POSTS"  style="width: 100%;height: 900px;overflow-y: scroll;font-family: 'medium';">
+
+            <div class="post" style="width: 80%;height: max-content;text-align: center;margin-left: auto;margin-right: auto;margin-top: 1%;border: 1px dashed black;padding: 1%;">
+                <h1>Lorem ipsum dolor</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor arcu eros, eu rutrum nibh pellentesque sed. Pellentesque eu ligula scelerisque ante aliquam rutrum ut vitae augue. Nunc id venenatis lectus, vel ullamcorper mi. Aenean efficitur hendrerit justo, vitae volutpat ligula. Aenean mi massa, tincidunt at libero id, iaculis pellentesque mi. Curabitur in ante dolor. Proin quis metus urna. Phasellus arcu sapien, consectetur at consequat id, consectetur et ipsum. Pellentesque imperdiet arcu non dignissim mattis. Donec tristique consectetur tortor, in faucibus turpis ullamcorper eget. Cras sagittis venenatis faucibus.
+                    <img src="https://colorpalettes.net/wp-content/uploads/2013/10/cvetovaya-palitra-108.jpg">
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!---->
+
+    <div class="footer" >
+        <div class="CONTACT" >
+            <br>
+            Linkedin : ----------
+            <br>
+            E-mail   : ----------
+            <br>
+            Website  : ----------
+            <br>
+            Phone    : ----------
+            <br>
+        </div>
+    </div>
+
+
+   <div class="editPage" id="editPage">
+       <div id="colorPicker"></div>
+       <br>
+       choose background image
+       <br>
+       <input type="file" style="direction:rtl" id="chooseImg">
+       <br>
+       <br>
+       background size(%)
+       <br>
+       <br>
+       <div id="backgroundXY">
+           <input type="number" min="1" max="100" value="100">
+           <input type="number" min="1" max="100" value="100">
+       </div>
+       <br>
+       <button id="setAttr" onclick="closeEdit()">set</button>
+   </div>
+
+</body>
+</html>
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:573)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:732)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:92)
+	at com.jayway.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:207)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:251)
+	at hello.HelloControllerTest.testHello(HelloControllerTest.java:34)
+]]></failure>
+    <system-out><![CDATA[19:24:58.470 [main] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class hello.HelloControllerTest]
+19:24:58.477 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:24:58.482 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:24:58.495 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [hello.HelloControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+19:24:58.522 [main] DEBUG o.s.t.c.w.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@31dc339b declaringClass = 'hello.HelloControllerTest', classes = '{class hello.App}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+19:24:58.531 [main] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [hello.HelloControllerTest]
+19:24:58.562 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.boot.test.IntegrationTestPropertiesListener@49fc609f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@cd2dae5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a883ce7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4973813a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6321e813]
+19:24:58.570 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloControllerTest]
+19:24:58.573 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloControllerTest]
+19:24:58.581 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloControllerTest]
+19:24:58.581 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloControllerTest]
+19:24:58.584 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.HelloControllerTest]
+19:24:58.585 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.HelloControllerTest]
+19:24:58.588 [main] DEBUG o.s.test.util.ReflectionTestUtils - Getting field 'mergedContextConfiguration' from target object [[DefaultTestContext@3fd7a715 testClass = HelloControllerTest, testInstance = hello.HelloControllerTest@711f39f9, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@71bbf57e testClass = HelloControllerTest, locations = '{}', classes = '{class hello.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]] or target class [class org.springframework.test.context.support.DefaultTestContext]
+19:24:58.590 [main] DEBUG o.s.test.util.ReflectionTestUtils - Setting field 'propertySourceProperties' of type [null] on target object [[WebMergedContextConfiguration@71bbf57e testClass = HelloControllerTest, locations = '{}', classes = '{class hello.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]] or target class [class org.springframework.test.context.web.WebMergedContextConfiguration] to value [[Ljava.lang.String;@2d6eabae]
+19:24:58.590 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3fd7a715 testClass = HelloControllerTest, testInstance = hello.HelloControllerTest@711f39f9, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@71bbf57e testClass = HelloControllerTest, locations = '{}', classes = '{class hello.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port:0, spring.datasource.url:jdbc:h2:mem:helloWorld;DB_CLOSE_ON_EXIT=FALSE, org.springframework.boot.test.IntegrationTest=true}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]].
+19:24:58.715 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+19:24:58.717 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+19:24:58.718 [main] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+19:24:58.719 [main] DEBUG o.s.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+2019-06-23 19:24:59.127  INFO 31869 --- [           main] hello.HelloControllerTest                : Starting HelloControllerTest on . with PID 31869 (/home/reza/Palace/Lab/JavaServerTraining/mavenType/helloWorld/target/test-classes started by reza in /home/reza/Palace/Lab/JavaServerTraining/mavenType/helloWorld)
+2019-06-23 19:24:59.459  INFO 31869 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5ae50ce6: startup date [Sun Jun 23 19:24:59 BST 2019]; root of context hierarchy
+2019-06-23 19:25:00.053  INFO 31869 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2019-06-23 19:25:00.773  INFO 31869 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73cd2253] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-23 19:25:01.322  INFO 31869 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 0 (http)
+2019-06-23 19:25:01.665  INFO 31869 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2019-06-23 19:25:01.667  INFO 31869 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2019-06-23 19:25:02.104  INFO 31869 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-23 19:25:02.106  INFO 31869 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2651 ms
+2019-06-23 19:25:03.631  INFO 31869 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-23 19:25:03.635  INFO 31869 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-23 19:25:03.636  INFO 31869 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-23 19:25:04.473  INFO 31869 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5ae50ce6: startup date [Sun Jun 23 19:24:59 BST 2019]; root of context hierarchy
+2019-06-23 19:25:04.661  INFO 31869 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/submitBlog],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public java.lang.String hello.HelloController.submitBlog(java.lang.String)
+2019-06-23 19:25:04.667  INFO 31869 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2019-06-23 19:25:04.667  INFO 31869 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-23 19:25:04.673  INFO 31869 --- [           main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: file:/home/reza/Palace/Lab/JavaServerTraining/mavenType/helloWorld/target/classes/static/index.html
+2019-06-23 19:25:04.688  INFO 31869 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-06-23 19:25:04.711  INFO 31869 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-23 19:25:04.712  INFO 31869 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-23 19:25:04.883  INFO 31869 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-23 19:25:05.193  INFO 31869 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 40764 (http)
+2019-06-23 19:25:05.208  INFO 31869 --- [           main] hello.HelloControllerTest                : Started HelloControllerTest in 6.483 seconds (JVM running for 7.347)
+2019-06-23 19:25:06.567  INFO 31869 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-23 19:25:06.579  INFO 31869 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-23 19:25:06.603  INFO 31869 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+]]></system-out>
+  </testcase>
+  <testcase name="testCalc" classname="hello.HelloControllerTest" time="0.841">
+    <failure message="JSON path left doesn&apos;t match.&#10;Expected: is &lt;100&gt;&#10;  Actual: null&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: JSON path left doesn't match.
+Expected: is <100>
+  Actual: null
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:89)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:573)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:732)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:228)
+	at com.jayway.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:190)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:211)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:257)
+	at hello.HelloControllerTest.testCalc(HelloControllerTest.java:43)
+]]></failure>
+  </testcase>
+</testsuite>
