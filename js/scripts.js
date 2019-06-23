@@ -1,30 +1,39 @@
 
 var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];
 var picker;
+var lastScrollTop=0;
+
+//////////////////////////////////////////
+document.onreadystatechange = () => {
+
+    if (document.readyState === 'complete') {
+    
+        picker= new Picker({
+        
+            parent: document.querySelector('#colorPicker'),
+            popup: false // 'right'(default), 'left', 'top', 'bottom'
+        });
+
+        addResizeListener();
+        dragElement(document.getElementsByClassName("editPage")[0]);
+
+        packingStyles();
+    }
+
+};
+///////////////////////////////////////////
 function addResizeListener(){
 
     map.forEach(cls=>{
         document.getElementsByClassName(cls)[0].setAttribute('onclick','resizer(\''+cls+'\');event.cancelBubble=true;');
-    });
-    
-    ///////////////
-   picker= new Picker({
-        
-            parent: document.querySelector('#colorPicker'),
-        
-            popup: false // 'right'(default), 'left', 'top', 'bottom'
-        
-        });
-        
-        
-
-               
+    });               
 }
+/////////////////////////////////////////
 
 function getColor(){
     console.log(document.getElementsByClassName("picker_editor")[0].firstElementChild.value);
 }
-
+///////////////////////////////////////
 
 
 function resizer(elemClass){
@@ -147,12 +156,9 @@ function exitResize(e){
 }
 //copyNodeStyle(element,document.getElementsByClassName("Home")[0]);
 }
+//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 
-setTimeout(function(){addResizeListener();dragElement(document.getElementsByClassName("editPage")[0]);},1000);
-
-
-
-var lastScrollTop=0;
 function updatePos(){
 
     if(document.getElementsByClassName("move").length==0){
@@ -180,16 +186,12 @@ function updatePos(){
 
     
 }
+//////////////////////////////////////////////////////////////////////
 
 
 
-function copyNodeStyle(sourceNode, targetNode) {
-    const computedStyle =window.getComputedStyle(sourceNode);
-    Array.from(computedStyle).forEach(key => targetNode.style.setProperty(key, computedStyle.getPropertyValue(key), computedStyle.getPropertyPriority(key)))
-  }
 
-
-
+//////////////////////////////////////////////
 
 
   function disableScrolling(){
@@ -263,16 +265,59 @@ function editEl(elClass){
         var reader = new FileReader();
         reader.onloadend = function() {
              el.style.backgroundImage ='url(\''+ reader.result+'\')';
+             el.style.backgroundSize="100% 100%";
              console.log(reader.result);
         }
         reader.readAsDataURL(file);
     },false)
-   // document.getElementsByClassName("picker_editor")[0].firstElementChild.value.onchange=getColor();//.addEventListener('change',getColor,false);
+   
 
 }
 
 
-//////////
+/////////////////////////////////////////////
 function closeEdit(){
     document.getElementById("editPage").style.display='none';
 }
+
+////////////////////////////////
+
+function editText(el){
+    var input=document.createElement('input');
+    input.classList="getText";
+
+    input.style.width=el.offsetWidth+'px';
+    input.style.height=el.offsetHeight+'px';
+    input.style.left=el.offsetLeft+'px';
+    input.style.top=el.offsetTop+'px';
+    
+    document.body.prepend(input);
+    input.focus();
+
+    document.body.addEventListener('click',exit=function(e){
+
+        el.innerHTML=input.value;
+        input.remove();
+        window.removeEventListener('click',exit,false);
+
+    },false);
+}
+
+////////////////////////////////////////////////
+
+function packingStyles(){
+    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,Title:document.getElementsByClassName("Title")[0].innerHTML}
+    map.forEach(cls=>{
+        obj[cls]= document.getElementsByClassName(cls)[0].style.cssText;
+    });
+    console.log(obj);
+}
+
+
+/////////////////////////////////////
+
+
+
+
+
+

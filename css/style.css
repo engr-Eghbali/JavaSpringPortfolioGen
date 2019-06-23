@@ -233,6 +233,12 @@ body{
     margin-right: auto;
 }
 
+.getText{
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    text-align: center;
+}
 
 h1{
     font-family: 'bold'
