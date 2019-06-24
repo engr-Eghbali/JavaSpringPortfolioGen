@@ -321,10 +321,17 @@ function packingStyles(){
     }
 
     
-    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,Title:document.getElementsByClassName("Title")[0].innerHTML,URL:URL}
+    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,Title:document.getElementsByClassName("Title")[0].innerHTML,URL:URL,Style:null}
+    var temp={};
+
     map.forEach(cls=>{
-        obj[cls]= document.getElementsByClassName(cls)[0].style.cssText;
+       
+
+        temp[cls]=document.getElementsByClassName(cls)[0].style.cssText;
+        console.log(temp);
+        
     });
+    obj["Style"]=temp;
     console.log(obj);
 
 

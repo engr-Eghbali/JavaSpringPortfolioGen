@@ -2,11 +2,15 @@ package hello;
 
 import lombok.Data;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.json.JsonParser;
+import org.springframework.boot.json.JsonParserFactory;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -32,8 +36,15 @@ public class HelloController {
 
         BlogModel blog = new BlogModel();
 
+        JsonParser parser = JsonParserFactory.getJsonParser();
+        Map<String, Object> map = parser.parseMap(user);
+
         blog.setId(212);
-        blog.setStyle(user);
+        blog.setName(map.get("Name").toString());
+        blog.setTitle(map.get("Title").toString());
+        blog.setUrl(map.get("URL").toString());
+        blog.setPosts("");
+        blog.setStyle(map.get("Style").toString());
 
         serv.createBlog(blog);
         return user;
