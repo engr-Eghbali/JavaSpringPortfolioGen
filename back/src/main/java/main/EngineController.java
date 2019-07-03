@@ -1,5 +1,6 @@
 package main;
 
+import org.bson.types.ObjectId;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +24,29 @@ public class EngineController {
         try {
 
             JSONObject parsedData = new JSONObject(data);
-            return parsedData.getJSONObject("Blog").toString();
+            User newUser = new User(new ObjectId());
+            Blog newBlog = new Blog();
+            Bio newBio = new Bio();
+            Contacts newContact = new Contacts();
+
+            newUser.setName(parsedData.getString("Name"));
+            newUser.setURL(parsedData.getString("URL"));
+
+            newBio.setContent(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("Content"));
+            newBio.setCVLink(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("CVLink"));
+
+            newContact.setEmail(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Email"));
+            newContact.setLinkedin(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Linkedin"));
+            newContact.setPhone(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Phone"));
+
+            newBlog.setTitle(parsedData.getJSONObject("Blog").getString("Title"));
+            newBlog.setBio(newBio);
+            newBlog.setContact(newContact);
+            newBlog.setStyle(parsedData.getJSONObject("Style").toString());
+
+            newUser.setBlog(newBlog);
+
+            return newUser.getBlog().getStyle().toString();
 
         } catch (Exception e) {
             return "bad request: invalid data" + e;

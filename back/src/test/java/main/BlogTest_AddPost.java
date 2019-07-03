@@ -5,12 +5,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.bson.types.ObjectId;
 import org.junit.Before;
 import org.junit.Test;
 
 public class BlogTest_AddPost {
 
-    public static User user = new User("U5serId");
+    public static User user = new User(new ObjectId());
     public static Blog blog = new Blog();
     public static Contacts contact = new Contacts();
     public static Post post = new Post();
@@ -23,7 +24,7 @@ public class BlogTest_AddPost {
         bio.setContent("here is user's biography");
         contact.setEmail("email@protonmail.com");
         contact.setLinkedin("http://linkedin.com");
-        contact.setPhone(123456);
+        contact.setPhone("123456");
 
         blog.setTitle("blogTitle");
         blog.setBio(bio);

@@ -2,16 +2,16 @@ package main;
 
 public class Contacts {
 
-    private Number Phone;
+    private String Phone;
     private String Email;
     private String Linkedin;
 
-    public Number getPhone() {
+    public String getPhone() {
         return Phone;
     }
 
-    public void setPhone(Number phone) {
-        this.Phone = phone;
+    public void setPhone(String string) {
+        this.Phone = string;
     }
 
     public String getEmail() {

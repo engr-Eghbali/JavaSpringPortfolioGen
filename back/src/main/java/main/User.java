@@ -1,17 +1,18 @@
 package main;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "users")
 public class User {
     @Id
-    private String Id;
+    private ObjectId Id;
     public String Name;
     protected String URL;
     private Blog blog;
 
-    User(String id) {
+    User(ObjectId id) {
         this.Id = id;
     }
 

@@ -323,9 +323,9 @@ function packingStyles(){
     
     var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,
              URL:URL,
-             Blog:{Title:document.getElementsByClassName("Title")[0].innerHTML,
-                   Bio:{Content:document.getElementsByClassName("Biography")[0],CVLink:document.getElementsByClassName("CVLink")[0]},
-                   Contact:{Phone:document.getElementById("Phone").innerText , Email: document.getElementById("Email") , Linkedin:document.getElementById("Linkedin")},
+             Blog:{Title:document.getElementsByClassName("Title")[0].innerText,
+                   Bio:{Content:document.getElementsByClassName("Biography")[0].innerText,CVLink:document.getElementsByClassName("CVLink")[0].innerText},
+                   Contact:{Phone:document.getElementById("Phone").innerText , Email: document.getElementById("Email").innerText , Linkedin:document.getElementById("Linkedin").innerText},
                    Style:null}}
     var temp={};
 
