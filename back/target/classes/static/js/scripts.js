@@ -321,7 +321,12 @@ function packingStyles(){
     }
 
     
-    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,Title:document.getElementsByClassName("Title")[0].innerHTML,URL:URL,Style:null}
+    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,
+             URL:URL,
+             Blog:{Title:document.getElementsByClassName("Title")[0].innerHTML,
+                   Bio:{Content:document.getElementsByClassName("Biography")[0],CVLink:document.getElementsByClassName("CVLink")[0]},
+                   Contact:{Phone:document.getElementById("Phone").innerText , Email: document.getElementById("Email") , Linkedin:document.getElementById("Linkedin")},
+                   Style:null}}
     var temp={};
 
     map.forEach(cls=>{

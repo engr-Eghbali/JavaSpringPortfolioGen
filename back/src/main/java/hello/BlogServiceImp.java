@@ -25,6 +25,7 @@ public class BlogServiceImp implements BlogService {
     @Override
     public void createBlog(BlogModel emp) {
         dao.save(emp);
+
     }
 
     /*

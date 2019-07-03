@@ -1,0 +1,59 @@
+package main;
+
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin
+@RestController
+public class EngineController {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @RequestMapping(value = "/submitBlog", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody String submitBlog(@RequestBody String data) {
+
+        try {
+
+            JSONObject parsedData = new JSONObject(data);
+            return parsedData.getJSONObject("Blog").toString();
+
+        } catch (Exception e) {
+            return "bad request: invalid data" + e;
+
+        }
+
+    }
+
+    /*
+     * @RequestMapping(value = "/{url}", method = RequestMethod.GET, produces =
+     * MediaType.APPLICATION_JSON_VALUE, consumes =
+     * MediaType.APPLICATION_JSON_VALUE) public @ResponseBody String
+     * serveBlog(@PathVariable("url") String url) {
+     * 
+     * return ""; }
+     */
+    // @Data
+    // static class Result {
+    // private final int left;
+    // private final int right;
+    // private final long answer;
+    // }
+
+    // SQL sample
+    // @RequestMapping("calc")
+    // Result calc(@RequestParam int left, @RequestParam int right) {
+    // MapSqlParameterSource source = new MapSqlParameterSource()
+    // .addValue("left", left)
+    // .addValue("right", right);
+    // return jdbcTemplate.queryForObject("SELECT :left + :right AS answer", source,
+    // (rs, rowNum) -> new Result(left, right, rs.getLong("answer")));
+    // }
+}

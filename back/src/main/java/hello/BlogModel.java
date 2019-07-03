@@ -46,7 +46,7 @@ public class BlogModel {
         return url;
     }
 
-    public void setUrl(String title) {
+    public void setUrl(String url) {
         this.url = url;
     }
 

@@ -285,6 +285,7 @@ function closeEdit(){
 function editText(el){
     var input=document.createElement('input');
     input.classList="getText";
+    input.value="Type something"
 
     input.style.width=el.offsetWidth+'px';
     input.style.height=el.offsetHeight+'px';
@@ -296,6 +297,9 @@ function editText(el){
 
     document.body.addEventListener('click',exit=function(e){
 
+        if(input.value.length<2){
+            input.value="Type something";
+        }
         el.innerHTML=input.value;
         input.remove();
         window.removeEventListener('click',exit,false);
@@ -306,11 +310,51 @@ function editText(el){
 ////////////////////////////////////////////////
 
 function packingStyles(){
-    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,Title:document.getElementsByClassName("Title")[0].innerHTML}
+
+    //var URL="/";
+    //URL+=prompt("enter route name for your blog:");
+    
+    URL="/"+prompt("enter route name for your blog:");
+    if (URL=="/" || URL=="/null"){
+        packingStyles();
+        return;
+    }
+
+    
+    var obj={Name:document.getElementsByClassName("Name")[0].innerHTML,
+             URL:URL,
+             Blog:{Title:document.getElementsByClassName("Title")[0].innerHTML,
+                   Bio:{Content:document.getElementsByClassName("Biography")[0],CVLink:document.getElementsByClassName("CVLink")[0]},
+                   Contact:{Phone:document.getElementById("Phone").innerText , Email: document.getElementById("Email") , Linkedin:document.getElementById("Linkedin")},
+                   Style:null}}
+    var temp={};
+
     map.forEach(cls=>{
-        obj[cls]= document.getElementsByClassName(cls)[0].style.cssText;
+       
+
+        temp[cls]=document.getElementsByClassName(cls)[0].style.cssText;
+        console.log(temp);
+        
     });
+    obj["Style"]=temp;
     console.log(obj);
+
+
+    ////////////////////
+
+    var data=JSON.stringify(obj);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+             
+
+        }    
+    };
+
+    xhttp.open("POST", "http://localhost:8080/submitBlog", true);
+    xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    //xhttp.setRequestHeader("Content-type", "multipart/form-data");
+    xhttp.send(data);
 }
 
 
