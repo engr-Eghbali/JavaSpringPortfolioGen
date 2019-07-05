@@ -50,8 +50,8 @@ public class EngineController {
 
             newUser.setBlog(newBlog);
 
-            db.saveNewUser(newUser);
-            return newUser.getBlog().getStyle().toString();
+            String result = db.saveNewUser(newUser);
+            return result;
 
         } catch (Exception e) {
             return "bad request: invalid data=>" + e;

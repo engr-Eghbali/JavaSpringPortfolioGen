@@ -8,29 +8,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "users")
 public class User {
     @Id
-    private ObjectId Id;
-    public String Name;
-    protected String URL;
+    private ObjectId id;
+    public String name;
+    protected String url;
     private Blog blog;
 
     User(ObjectId id) {
-        this.Id = id;
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public String getURL() {
-        return URL;
+        return url;
     }
 
     public void setURL(String url) {
-        this.URL = url;
+        this.url = url;
     }
 
     public Blog getBlog() {
