@@ -4,6 +4,7 @@ import org.bson.types.ObjectId;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class EngineController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    DBmodule db;
 
     @RequestMapping(value = "/submitBlog", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String submitBlog(@RequestBody String data) {
@@ -46,10 +50,11 @@ public class EngineController {
 
             newUser.setBlog(newBlog);
 
+            db.saveNewUser(newUser);
             return newUser.getBlog().getStyle().toString();
 
         } catch (Exception e) {
-            return "bad request: invalid data" + e;
+            return "bad request: invalid data=>" + e;
 
         }
 
