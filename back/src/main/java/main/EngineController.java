@@ -1,5 +1,7 @@
 package main;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.bson.types.ObjectId;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -7,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,28 +32,12 @@ public class EngineController {
 
             JSONObject parsedData = new JSONObject(data);
             User newUser = new User(new ObjectId());
-            Blog newBlog = new Blog();
-            Bio newBio = new Bio();
-            Contacts newContact = new Contacts();
-
             newUser.setName(parsedData.getString("Name"));
             newUser.setURL(parsedData.getString("URL"));
-
-            newBio.setContent(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("Content"));
-            newBio.setCVLink(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("CVLink"));
-
-            newContact.setEmail(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Email"));
-            newContact.setLinkedin(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Linkedin"));
-            newContact.setPhone(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Phone"));
-
-            newBlog.setTitle(parsedData.getJSONObject("Blog").getString("Title"));
-            newBlog.setBio(newBio);
-            newBlog.setContact(newContact);
-            newBlog.setStyle(parsedData.getJSONObject("Style").toString());
-
+            Blog newBlog = Blog.blogInit(parsedData);
             newUser.setBlog(newBlog);
-
             String result = db.saveNewUser(newUser);
+
             return result;
 
         } catch (Exception e) {
@@ -60,6 +47,24 @@ public class EngineController {
 
     }
 
+    @RequestMapping(value = "/srv/{path}", method = RequestMethod.GET)
+    public String serveBlog(@PathVariable("path") String path, HttpServletResponse response) {
+
+        response.setHeader("Content-Type", "text/html");
+
+        User userTMP = db.findByUrl(path);
+
+        if (userTMP == null) {
+
+            return "404";
+        } else {
+
+            Blog.generate(userTMP);
+            return "<html><body><h1>" + userTMP.getBlog().getTitle() + "</h1></body></html>";
+
+        }
+
+    }
     /*
      * @RequestMapping(value = "/{url}", method = RequestMethod.GET, produces =
      * MediaType.APPLICATION_JSON_VALUE, consumes =
