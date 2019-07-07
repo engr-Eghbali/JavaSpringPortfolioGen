@@ -336,6 +336,7 @@ function packingStyles(){
         console.log(temp);
         
     });
+    temp["body"]=document.body.style.cssText;
     obj["Style"]=temp;
     console.log(obj);
 

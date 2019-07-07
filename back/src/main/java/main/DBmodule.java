@@ -33,4 +33,8 @@ public class DBmodule {
 
     }
 
+    public User findByUrl(String url) {
+        return dao.findOneByUrl(url);
+    }
+
 }

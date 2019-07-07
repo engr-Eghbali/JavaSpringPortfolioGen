@@ -6,6 +6,8 @@ import javax.jws.soap.SOAPBinding.Style;
 
 import com.mongodb.util.JSON;
 
+import org.json.JSONObject;
+
 public class Blog {
 
     private String Title;
@@ -84,4 +86,24 @@ public class Blog {
         return false;
     }
 
+    public static Blog blogInit(JSONObject parsedData) {
+
+        Blog newBlog = new Blog();
+        Bio newBio = new Bio();
+        Contacts newContact = new Contacts();
+
+        newBio.setContent(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("Content"));
+        newBio.setCVLink(parsedData.getJSONObject("Blog").getJSONObject("Bio").getString("CVLink"));
+
+        newContact.setEmail(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Email"));
+        newContact.setLinkedin(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Linkedin"));
+        newContact.setPhone(parsedData.getJSONObject("Blog").getJSONObject("Contact").getString("Phone"));
+
+        newBlog.setTitle(parsedData.getJSONObject("Blog").getString("Title"));
+        newBlog.setBio(newBio);
+        newBlog.setContact(newContact);
+        newBlog.setStyle(parsedData.getJSONObject("Style").toString());
+
+        return newBlog;
+    }
 }
