@@ -119,46 +119,10 @@ public class Blog {
 
     public static String generate(User user) {
 
-        Map<String, String> varMap = new HashMap();
+        /** Read this from config file */
+        String choosedTheme = "./statics/Themes/Portfolio_1";
+        Engine.HTML_Generator(user, choosedTheme);
 
-        System.out.println(user.getName());
-        varMap.put("{Name}", user.getName());
-        varMap.put("{Title}", user.getBlog().getTitle());
-        varMap.put("{Biography}", user.getBlog().getBio().getContent());
-        varMap.put("{CVLink}", user.getBlog().getBio().getCVLink());
-        varMap.put("{Linkedin}", user.getBlog().getContact().getLinkedin());
-        varMap.put("{Email}", user.getBlog().getContact().getEmail());
-        varMap.put("{Phone}", user.getBlog().getContact().getPhone());
-        /** You can add custom user scripts and styles in here */
-        varMap.put("{Style}", "");
-        varMap.put("{Script}", "");
-
-        try (Stream<Path> paths = Files.walk(Paths.get("./statics/Themes/Portfolio_1/partials/"))) {
-
-            paths.forEach(path -> {
-
-                try {
-                    InputStream is = new FileInputStream(path.toString());
-                    BufferedReader buf = new BufferedReader(new InputStreamReader(is));
-                    String line = buf.readLine();
-                    StringBuilder sb = new StringBuilder();
-                    while (line != null) {
-                        sb.append(line).append("\n");
-                        line = buf.readLine();
-                    }
-                    String fileAsString = sb.toString();
-                    System.out.println("Contents : " + fileAsString);
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-
-            });
-
-            return paths.toString();
-        } catch (Exception e) {
-
-            return e.toString();
-        }
-
+        return null;
     }
 }
