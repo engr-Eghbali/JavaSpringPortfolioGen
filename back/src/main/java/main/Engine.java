@@ -146,7 +146,12 @@ public class Engine {
         for (Iterator<String> keys = parsedStyle.keys(); keys.hasNext();) {
 
             String key = keys.next();
-            styleAsString += "." + key + "{" + parsedStyle.getString(key) + "}";
+            if (key.equals("body")) {
+                styleAsString += key + "{" + parsedStyle.getString(key) + "}";
+            } else {
+                styleAsString += "." + key + "{" + parsedStyle.getString(key) + "}";
+            }
+
         }
 
         // default styles
