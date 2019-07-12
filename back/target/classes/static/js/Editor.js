@@ -291,7 +291,7 @@ function editText(el){
     document.body.prepend(input);
     input.focus();
 
-    window.addEventListener('click',exit=function(e){
+    input.addEventListener('click',exit=function(e){
 
         if(input.value.length<2){
             input.value="Type something";

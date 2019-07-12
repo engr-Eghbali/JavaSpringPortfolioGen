@@ -3,7 +3,7 @@ import Blog from './BlogClass.js';
 import Bio  from './BioClass.js';
 import Contact from './ContactClass.js';
 
-var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];
+
 
 
 //////////////////////////////////////////
@@ -35,7 +35,8 @@ document.onreadystatechange = () => {
 
 //!.!.!.!.!.!.!.!.!.!.!.!.!.!//
 function packingStyles(){
-  
+
+    var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];
     var temp={};
     map.forEach(cls=>{
     
