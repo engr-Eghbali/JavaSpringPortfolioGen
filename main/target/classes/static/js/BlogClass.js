@@ -1,38 +1,38 @@
-import Bio from './BioClass.js';
-import Contact from './ContactClass.js';
-export default class Blog{
-    
-    constructor(){
-        this._Title   = "Blog Title";
-        this._Bio     = new Bio();
-        this._Contact = new Contact();
-        this._Style   = {};
+"use strict";
+exports.__esModule = true;
+var BioClass_1 = require("./BioClass");
+var ContactClass_1 = require("./ContactClass");
+var Blog = /** @class */ (function () {
+    function Blog() {
+        this._Title = "Blog Title";
+        this._Bio = new BioClass_1["default"]();
+        this._Contact = new ContactClass_1["default"]();
+        this._Style = {};
     }
-
-    setTitle(val){
-        this._Title=val;
-    }
-    getTitle(){
+    Blog.prototype.setTitle = function (val) {
+        this._Title = val;
+    };
+    Blog.prototype.getTitle = function () {
         return this._Title;
-    }
-    setBio(val){
-        this._Bio=val;
-    }
-    getBio(){
+    };
+    Blog.prototype.setBio = function (val) {
+        this._Bio = val;
+    };
+    Blog.prototype.getBio = function () {
         return this._Bio;
-    }
-    setContact(val){
-        this._Contact=val;
-    }
-    getContact(){
+    };
+    Blog.prototype.setContact = function (val) {
+        this._Contact = val;
+    };
+    Blog.prototype.getContact = function () {
         return this._Contact;
-    }
-    setStyle(val){
-        this._Style=val;
-    }
-    getStyle(){
+    };
+    Blog.prototype.setStyle = function (val) {
+        this._Style = val;
+    };
+    Blog.prototype.getStyle = function () {
         return this._Style;
-    }
-
-    
-}
+    };
+    return Blog;
+}());
+exports["default"] = Blog;

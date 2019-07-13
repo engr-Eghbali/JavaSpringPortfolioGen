@@ -1,4 +1,7 @@
 export default class Bio{
+    private    _Content: string;
+    private    _CVLink: string;
+    private    _Biography: any;
 
     constructor(){
         this._Content="lurem ipsom";

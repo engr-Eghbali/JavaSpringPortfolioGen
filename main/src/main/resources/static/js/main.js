@@ -1,4 +1,4 @@
-import User from './userClass.js';
+import User from './UserClass.js';
 import Blog from './BlogClass.js';
 import Bio  from './BioClass.js';
 import Contact from './ContactClass.js';

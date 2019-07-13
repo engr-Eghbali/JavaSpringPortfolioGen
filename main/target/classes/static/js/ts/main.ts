@@ -1,7 +1,8 @@
-import User from './UserClass.js';
-import Blog from './BlogClass.js';
-import Bio  from './BioClass.js';
-import Contact from './ContactClass.js';
+import User from './UserClass';
+import Blog from './BlogClass';
+import Bio  from './BioClass';
+import Contact from './ContactClass';
+import Picker from './vanilla-picker.min.js';
 
 
 
@@ -9,6 +10,7 @@ import Contact from './ContactClass.js';
 //////////////////////////////////////////
 document.onreadystatechange = () => {
 
+    var picker:any;
     if (document.readyState === 'complete') {
     
         picker= new Picker({
@@ -38,10 +40,12 @@ function packingStyles(){
 
     var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];
     var temp={};
+    var elem;
     map.forEach(cls=>{
     
-        temp[cls]=document.getElementsByClassName(cls)[0].style.cssText;
-        console.log(temp);
+        elem=<HTMLElement>document.getElementsByClassName(cls)[0];
+        temp[cls]=elem.style.cssText;
+        
     });
     temp["body"]=document.body.style.cssText;
     return temp;
@@ -51,8 +55,8 @@ function packingStyles(){
 
 function processAndSend(){
 
-    URL=""+prompt("enter route name for your blog:");
-    if (URL==="" || URL=="null" || URL=="/null"){
+    var Url:string=""+prompt("enter route name for your blog:");
+    if (Url==="" || Url=="null" || Url=="/null"){
         processAndSend();
         return;
     }
@@ -62,14 +66,14 @@ function processAndSend(){
     let bio =new Bio();
     let contact=new Contact();
 
-    contact.setEmail(document.getElementsByClassName("Email")[0].innerText);
-    contact.setLinkedin(document.getElementsByClassName("Linkedin")[0].innerText);
-    contact.setPhone(document.getElementsByClassName("Phone")[0].innerText);
+    contact.setEmail((<HTMLElement>document.getElementsByClassName("Email")[0]).innerText);
+    contact.setLinkedin((<HTMLElement>document.getElementsByClassName("Linkedin")[0]).innerText);
+    contact.setPhone((<HTMLElement>document.getElementsByClassName("Phone")[0]).innerText);
 
-    bio.setBiography(document.getElementsByClassName("Biography")[0].innerText);
-    bio.setCVLink(document.getElementsByClassName("CVLink")[0].innerText);
+    bio.setBiography((<HTMLElement>document.getElementsByClassName("Biography")[0]).innerText);
+    bio.setCVLink((<HTMLElement>document.getElementsByClassName("CVLink")[0]).innerText);
 
-    blog.setTitle(document.getElementsByClassName("Title")[0].innerText);
+    blog.setTitle((<HTMLElement>document.getElementsByClassName("Title")[0]).innerText);
     blog.setBio(bio);
     blog.setContact(contact);
     blog.setStyle(packingStyles());
