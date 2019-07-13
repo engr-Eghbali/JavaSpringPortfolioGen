@@ -24,7 +24,7 @@ document.onreadystatechange = () => {
         });
         dragElement(document.getElementsByClassName("editPage")[0]);
         alert("click on elements to edit them!");
-       // processAndSend();
+       
     }
 
 };

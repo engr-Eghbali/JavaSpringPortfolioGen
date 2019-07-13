@@ -1,4 +1,15 @@
 
+
+
+////////////////////////////////////////////////////////////////////////////////////
+//                                                                                //
+//                                                                                //
+//      This code is look like hammered sh*t! I know,will refactor later.         //
+//                                                                                //
+//                                                                                //
+////////////////////////////////////////////////////////////////////////////////////
+
+
 var picker;
 var lastScrollTop=0;
 var map=["header","topMenu","logo","menuOption","main","footer","Home","Avatar","BIO","Biography","CVLink","POSTS"];

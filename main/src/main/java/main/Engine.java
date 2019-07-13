@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.stream.Stream;
-
 import org.json.JSONObject;
 
 public class Engine {
@@ -62,9 +61,7 @@ public class Engine {
 
     }
 
-    ///////////////////////////
-    //////////////////////////
-
+    /////////////////////////// load index page
     private static String loadIndex(String ThemePath, Map<String, String> partMap) {
 
         try {
@@ -95,9 +92,7 @@ public class Engine {
         return null;
     }
 
-    ////////////////////////
-    ///////////////////////
-
+    //////////////////////// generate all .js files
     private static String scriptGenerator(String ThemePath) {
 
         StringBuilder scripts = new StringBuilder();
@@ -133,9 +128,7 @@ public class Engine {
         return scripts.toString();
     }
 
-    ///////////////////////
-    ///////////////////////
-
+    /////////////////////// generate all styles(css)
     private static String styleGenerator(User user, String ThemePath) {
 
         JSONObject parsedStyle = new JSONObject(user.getBlog().getStyle());

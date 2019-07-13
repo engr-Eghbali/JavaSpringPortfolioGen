@@ -64,14 +64,8 @@ public class EngineController {
         }
 
     }
-    /*
-     * @RequestMapping(value = "/{url}", method = RequestMethod.GET, produces =
-     * MediaType.APPLICATION_JSON_VALUE, consumes =
-     * MediaType.APPLICATION_JSON_VALUE) public @ResponseBody String
-     * serveBlog(@PathVariable("url") String url) {
-     * 
-     * return ""; }
-     */
+
+    ///////////////// sql example
     // @Data
     // static class Result {
     // private final int left;
